@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+#navigation {
+  margin: 0;
+  position: relative;
+  top: -10;
+  left: -10;
+
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background-color: #EEEEEE;
+    
+    li {
+      display: inline-block;
+      list-style: none;
+      padding: 0.8em;
+      
+      &:hover {
+        background-color: #DDDDDD;
+      }
+      
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+    
+    li#sign_in {
+      background-color: #E0E0E0;
+      float: right;
+      
+      &:hover {
+        background-color: #CCCCCC;
+      }
+    }
+  }
+}
+
+#content {
+  margin: 0 1em;
+}
