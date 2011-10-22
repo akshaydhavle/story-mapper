@@ -2,12 +2,13 @@ body {
   margin: 0;
 }
 
-#navigation {
-  margin: 0;
-  position: relative;
-  top: -10;
-  left: -10;
+.notice, .alert {
+  padding: 1em;
+  margin: 1em;
+}
 
+
+#navigation {
   ul {
     width: 100%;
     padding: 0;
@@ -36,6 +37,10 @@ body {
       
       &:hover {
         background-color: #CCCCCC;
+      }
+      
+      .welcome {
+        font-size: 80%;
       }
     }
   }
