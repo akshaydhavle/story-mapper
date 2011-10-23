@@ -9,3 +9,26 @@
   margin: 2em auto;
   padding: 1em 3em;
 }
+
+// Most of everything here is shamelessly borrowed from http://tumblr.gesteves.com/post/475773360/css-glow-effects-with-box-shadow
+form {
+  input {
+    font-size: 115%;
+  
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+  }
+
+  input:focus {
+    box-shadow: 0 0 10px rgba(150, 150, 150, 1);
+    -webkit-box-shadow: 0 0 10px rgba(150, 150, 150, 1); 
+    -moz-box-shadow: 0 0 10px rgba(150, 150, 150, 1);
+    border:1px solid rgba(150, 150, 150, 0.8); 
+  }
+}
