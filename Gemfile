@@ -17,6 +17,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'dynamic_form'
 gem 'haml'
 gem 'jquery-rails'
 

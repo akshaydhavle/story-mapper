@@ -1,6 +1,12 @@
+@mixin glow-border($r, $g, $b) {
+  box-shadow: 0 0 10px rgba($r, $g, $b, 1);
+  -webkit-box-shadow: 0 0 10px rgba($r, $g, $b, 1); 
+  -moz-box-shadow: 0 0 10px rgba($r, $g, $b, 1);
+  border:1px solid rgba($r, $g, $b, 0.8); 
+}
+
 #session_container {
-  text-align: center;
-  
+  text-align: center;  
 }
 
 #sign_in_up_form {
@@ -26,9 +32,18 @@ form {
   }
 
   input:focus {
-    box-shadow: 0 0 10px rgba(150, 150, 150, 1);
-    -webkit-box-shadow: 0 0 10px rgba(150, 150, 150, 1); 
-    -moz-box-shadow: 0 0 10px rgba(150, 150, 150, 1);
-    border:1px solid rgba(150, 150, 150, 0.8); 
+    @include glow-border(150,150,150);
   }
+}
+
+.field_with_errors {
+  input {
+    @include glow-border(150,0,0);
+  }
+}
+
+#errorExplanation {
+  display: inline-block;
+  padding: 1em;
+  @include glow-border(150,0,0);
 }
