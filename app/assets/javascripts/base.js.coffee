@@ -3,4 +3,4 @@ $ ->
 
 
 hideFlashMessages = ->
-  $('.notice, .alert').delay(3000).hide('fade');
+  $('.notice').delay(3000).hide('fade');
