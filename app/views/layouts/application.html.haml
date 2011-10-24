@@ -17,8 +17,7 @@
           - else
             = link_to "Sign In", new_user_session_path
         %li.first= link_to "Projects", projects_path
-        %li Categories
-        %li Profile
+        %li= link_to "My Account", edit_user_registration_path
     
     #messages
       - if notice.present?

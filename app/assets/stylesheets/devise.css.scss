@@ -1,8 +1,13 @@
+$base-gray: #E6E6E6;
+$darker-gray: #D3D3D3;
+
 #session_container {
   text-align: center;  
 }
 
 #sign_in_up_form {
+  background-color: $base-gray;
+  border: 1px solid $darker-gray;
   text-align: left;
   display: inline-block;
   margin: 2em auto;
