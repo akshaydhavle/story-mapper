@@ -43,4 +43,5 @@ group :test do
   gem 'turn', :require => false
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'faker'
 end

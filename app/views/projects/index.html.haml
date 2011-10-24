@@ -3,7 +3,7 @@
 #projects
   - @projects.each do |project|
     %p
-      = project.inspect
-      = link_to "Delete", project, :method => :delete
-
+      = link_to project.name, project
+      = link_to "(Delete)", project, :method => :delete
+      
 = link_to "Create a project", new_project_path
