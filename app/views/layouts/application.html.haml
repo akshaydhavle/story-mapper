@@ -11,12 +11,14 @@
       %ul
         %li#sign_in
           - if current_user.present?
-            = current_user.email
+            = current_user.username
             %span.welcome
               = link_to "Sign Out", destroy_user_session_path, :method => :delete
           - else
             = link_to "Sign In", new_user_session_path
-        %li= link_to "Projects", projects_path
+        %li.first= link_to "Projects", projects_path
+        %li Categories
+        %li Profile
     
     #messages
       - if notice.present?

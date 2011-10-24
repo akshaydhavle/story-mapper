@@ -4,7 +4,7 @@
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       
       %p
-        = f.email_field :email, {:placeholder => "Email Address"}
+        = f.text_field :login, {:placeholder => "Username or Email Address"}
       
       %p
         = f.password_field :password, {:placeholder => "Password"}

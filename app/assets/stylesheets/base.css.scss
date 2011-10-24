@@ -1,6 +1,21 @@
+$base-gray: #E6E6E6;
+$darker-gray: #D3D3D3;
+
+@mixin glow-border($r, $g, $b) {
+  box-shadow: 0 0 10px rgba($r, $g, $b, 1);
+  -webkit-box-shadow: 0 0 10px rgba($r, $g, $b, 1); 
+  -moz-box-shadow: 0 0 10px rgba($r, $g, $b, 1);
+  border:1px solid rgba($r, $g, $b, 0.8); 
+}
+
 body {
   margin: 0;
   font-family: Verdana,Arial,sans-serif; font-size: 14px;
+  color: #555555;
+}
+
+#content {
+  margin: 0 1em;
 }
 
 .notice, .alert {
@@ -15,7 +30,8 @@ body {
     padding: 0;
     margin: 0;
     display: inline-block;
-    background-color: #EEEEEE;
+    background-color: $base-gray;
+    border-bottom: 1px solid $darker-gray;
     
     li {
       display: inline-block;
@@ -23,21 +39,21 @@ body {
       padding: 0.8em;
       
       &:hover {
-        background-color: #DDDDDD;
+        background-color: $darker-gray;
       }
       
       a {
-        color: #000000;
+        color: #555555;
         text-decoration: none;
       }
     }
     
     li#sign_in {
-      background-color: #E0E0E0;
+      background-color: #DCDCDC;
       float: right;
       
       &:hover {
-        background-color: #CCCCCC;
+        background-color: $darker-gray;
       }
       
       .welcome {
@@ -47,6 +63,34 @@ body {
   }
 }
 
-#content {
-  margin: 0 1em;
+// Most of everything here is shamelessly borrowed from http://tumblr.gesteves.com/post/475773360/css-glow-effects-with-box-shadow
+form {
+  input {
+    font-size: 115%;
+    padding: 0.3em;
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+  }
+
+  input:focus {
+    @include glow-border(150,150,150);
+  }
+}
+
+.field_with_errors {
+  input {
+    @include glow-border(150,0,0);
+  }
+}
+
+#errorExplanation {
+  display: inline-block;
+  padding: 1em;
+  @include glow-border(150,0,0);
 }
