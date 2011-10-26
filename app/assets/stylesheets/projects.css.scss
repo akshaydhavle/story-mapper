@@ -1,0 +1,24 @@
+$color: rgb(255, 120, 10);
+
+.sticky {
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  background-color: rgb(255, 120, 10);
+
+  .title {
+    margin: 0;
+    padding: 2px;
+    background-color: darken($color, 8%);
+  
+    h3 { padding: 0; margin: 0; }
+  }
+  
+  .content {
+    padding: 0.3em;
+  }
+}
