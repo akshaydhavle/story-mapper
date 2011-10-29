@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe ProjectsController do
   describe "GET index" do
     before :each do
